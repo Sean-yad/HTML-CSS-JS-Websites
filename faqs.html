@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Slipstream Festival where we bring the upmost joy into your life">
+  <link rel="stylesheet" href="style.css">
+  <title>Slipstream Festival | FAQs</title>
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+</head>
+
+<body>
+  <header>
+
+
+    <a href="index.html"><img class="logo" src="images/logo3.png" alt="Slipstream Logo"></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+  </header>
+
+  <div class="wrap">
+    <div id="slider">
+      <div class="slide slide3">
+        <div class="slide-content">
+          <span>
+            FAQ
+
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="faq-content">
+    <div class="faq-header">Frequently Asked Questions</div>
+    <div class="faq-question">
+      <input id="q1" type="checkbox" class="panel">
+      <div class="plus">+</div>
+      <label for="q1" class="panel-title">How much does the entire rally cost?</label>
+      <div class="panel-content">the entire rally costs between $8000 to $13000 per person depending on the package
+      </div>
+    </div>
+
+    <div class="faq-question">
+      <input id="q2" type="checkbox" class="panel">
+      <div class="plus">+</div>
+      <label for="q2" class="panel-title">How often do we stop for gas?</label>
+      <div class="panel-content">We will stop very Frequently for gas since most cars have small tanks and need refills
+      </div>
+    </div>
+
+    <div class="faq-question">
+      <input id="q3" type="checkbox" class="panel">
+      <div class="plus">+</div>
+      <label for="q3" class="panel-title">Do I have to pay with a card?</label>
+      <div class="panel-content">No, We take cards, checks and cash</div>
+    </div>
+    <div class="faq-question">
+      <input id="q4" type="checkbox" class="panel">
+      <div class="plus">+</div>
+      <label for="q4" class="panel-title">Do we stop to take pictures at different locations?</label>
+      <div class="panel-content">We have many different planned locations for pictures, but notify group leader if you
+        like us to stop</div>
+    </div>
+
+    <div class="faq-question">
+      <input id="q5" type="checkbox" class="panel">
+      <div class="plus">+</div>
+      <label for="q5" class="panel-title">Can i buy tickets if i don't have an exotic car?</label>
+      <div class="panel-content">Unfortunately since we have sponsors like bugatti and porsche, we are only allowed to
+        sell tickets if owners meet required minimum car value </div>
+    </div>
+
+    <div class="faq-question">
+      <input id="q6" type="checkbox" class="panel">
+      <div class="plus">+</div>
+      <label for="q6" class="panel-title">What do i have to bring?</label>
+      <div class="panel-content">you will need to bring everything you'll need personally on the trip.</div>
+    </div>
+  </div>
+
+
+  <footer class="footer-basic">
+    <p class="footer-company">Lets Make Great Memories.</p>
+    <p class="footer-links">
+      <a href="index.html">Home</a>
+      ·
+      <a href="activities.html">Activities</a>
+      ·
+      <a href="faqs.html">FAQs</a>
+      ·
+      <a href="map.html">Map</a>
+      ·
+      <a href="sponsors.html">Sponsors</a>
+      ·
+      <a href="contact.html">Contact</a>
+    </p>
+    <p class="footer-company-name">Slipstream Festival &copy; 2021</p>
+  </footer>
+
+  <script>
+    let sliderImages = document.querySelectorAll(".slide"),
+      arrowLeft = document.querySelector("#arrow-left"),
+      arrowRight = document.querySelector("#arrow-right"),
+      current = 0;
+
+
+    function reset() {
+      for (let i = 0; i < sliderImages.length; i++) {
+        sliderImages[i].style.display = "none";
+      }
+    }
+
+
+    function startSlide() {
+      reset();
+      sliderImages[0].style.display = "block";
+    }
+
+
+    function slideLeft() {
+      reset();
+      sliderImages[current - 1].style.display = "block";
+      current--;
+    }
+
+    function slideRight() {
+      reset();
+      sliderImages[current + 1].style.display = "block";
+      current++;
+    }
+
+
+    arrowLeft.addEventListener("click", function () {
+      if (current === 0) {
+        current = sliderImages.length;
+      }
+      slideLeft();
+    });
+
+
+    arrowRight.addEventListener("click", function () {
+      if (current === sliderImages.length - 1) {
+        current = -1;
+      }
+      slideRight();
+    });
+
+    startSlide();
+  </script>
+</body>
+
+</html>

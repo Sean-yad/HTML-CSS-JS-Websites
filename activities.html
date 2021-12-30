@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Slipstream Festival where we bring the upmost joy into your life">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Slipstream Festival | Activities</title>
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+</head>
+
+<body>
+  <header>
+
+
+    <a href="index.html"><img class="logo" src="images/logo3.png" alt="Slipstream Logo"></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+  </header>
+
+  <div class="wrap">
+    <div id="slider">
+      <div class="slide slide2">
+        <div class="slide-content">
+          <span>
+            Activities
+
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <h2>Our Journey</h2>
+  <div class="vtl">
+    <div class="event">
+      <strong class="edate">December 1st <br>7:00 AM </strong>
+      <p class="etxt">We will start in 123 Mainstreet Houston TX, we will start heading towards Las Vegas and make it
+        there in time to eat and get some rest.</p>
+    </div>
+    <div class="event">
+      <strong class="edate">December 3rd <br>11:00 AM </strong>
+      <p class="etxt">We will pack up from the hotel, move to some scenic locations for pictures and some freshly brewed
+        coffee.</p>
+    </div>
+    <div class="event">
+      <strong class="edate">December 4th <br>2:00 PM </strong>
+      <p class="etxt">By now everyone should be rested and ready to head towards Los Angeles where we will have all of
+        our car meets.</p>
+    </div>
+    <div class="event">
+      <strong class="edate">December 5th <br>6:00 PM </strong>
+      <p class="etxt">Around this time we will start to head towards San Francisco where we will split and work our way
+        towards Chicago.</p>
+    </div>
+    <div class="event">
+      <strong class="edate">December 7th <br>9:00 PM </strong>
+      <p class="etxt">Our trip will officially end in Chicago where everyone will be free to leave or stay with our
+        group to loop back around to Houston.</p>
+    </div>
+    <div class="event">
+      <strong class="edate">Packages <br> </strong>
+      <ul>
+        <li>Starter:$6,000</li>
+        <li>Basic:$8,000</li>
+        <li>Basic plus:$9,000</li>
+        <li>Executive:$11,000</li>
+        <li>Premium:$11,500</li>
+        <li>Premium plus:$13,000</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <footer class="footer-basic">
+    <p class="footer-company">Lets Make Great Memories.</p>
+    <p class="footer-links">
+      <a href="index.html">Home</a>
+      ·
+      <a href="activities.html">Activities</a>
+      ·
+      <a href="faqs.html">FAQs</a>
+      ·
+      <a href="map.html">Map</a>
+      ·
+      <a href="sponsors.html">Sponsors</a>
+      ·
+      <a href="contact.html">Contact</a>
+    </p>
+    <p class="footer-company-name">Slipstream Festival &copy; 2021</p>
+  </footer>
+
+  <script>
+    let sliderImages = document.querySelectorAll(".slide"),
+      arrowLeft = document.querySelector("#arrow-left"),
+      arrowRight = document.querySelector("#arrow-right"),
+      current = 0;
+
+
+    function reset() {
+      for (let i = 0; i < sliderImages.length; i++) {
+        sliderImages[i].style.display = "none";
+      }
+    }
+
+
+    function startSlide() {
+      reset();
+      sliderImages[0].style.display = "block";
+    }
+
+
+    function slideLeft() {
+      reset();
+      sliderImages[current - 1].style.display = "block";
+      current--;
+    }
+
+    function slideRight() {
+      reset();
+      sliderImages[current + 1].style.display = "block";
+      current++;
+    }
+
+
+    arrowLeft.addEventListener("click", function () {
+      if (current === 0) {
+        current = sliderImages.length;
+      }
+      slideLeft();
+    });
+
+
+    arrowRight.addEventListener("click", function () {
+      if (current === sliderImages.length - 1) {
+        current = -1;
+      }
+      slideRight();
+    });
+
+    startSlide();
+  </script>
+</body>
+
+</html>
