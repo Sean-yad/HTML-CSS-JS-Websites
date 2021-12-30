@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unique cars for sale at the best price">
+    <meta name="keywords" content="Cars, Sale, Vehicle">
+    <meta name="author" content="Shayan Yadegari">
+    <link rel="icon" type="image/png" href="images/fav1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.min.css">
+    <script src="https://kit.fontawesome.com/8b1e1c8081.js" crossorigin="anonymous"></script>
+
+    <title>NewRide | Information</title>
+</head>
+
+<body>
+
+    <header>
+
+
+        <a href="index.html"><img class="logo" src="images/newridelogo1.png" alt="Slipstream Logo"></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="sale.html">Used Cars</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+
+
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
+
+    </header>
+    <div class="hero-image five">
+        <div class="hero-text">
+            <h1>Get the best deals here</h1>
+
+        </div>
+    </div>
+    <div class="all-content">
+        <h2 class="h2car">2015 Mercedes Benz SL-500</h2>
+        <div class="galleryContainer">
+            <div class="slideShowContainer">
+
+                <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+                <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+                <div class="captionTextHolder">
+                    <p class="captionText slideTextFromTop"></p>
+                </div>
+                <div class="imageHolder">
+                    <img src="images/m1.jpg">
+                    <p class="captionText">Exterior</p>
+                </div>
+                <div class="imageHolder">
+                    <img src="images/m2.jpg">
+                    <p class="captionText">Interior</p>
+                </div>
+                <div class="imageHolder">
+                    <img src="images/m3.jpg">
+                    <p class="captionText">Seats</p>
+                </div>
+                <div class="imageHolder">
+                    <img src="images/m4.jpg">
+                    <p class="captionText">Dashboard</p>
+                </div>
+            </div>
+            <div id="dotsContainer"></div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td class="tableh2">Basics</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="table-left">Price</td>
+                    <td>$45,504</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">Exterior color</td>
+                    <td>Alpine White</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">Drivetrain</td>
+                    <td>Rear-wheel Drive</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">MPG
+                    </td>
+                    <td>18-23</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">Fuel type</td>
+                    <td>Gasoline</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">Transmission</td>
+                    <td>Dualclutch Automatic</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">Engine</td>
+                    <td>5.4 V8</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">Mileage</td>
+                    <td>35,162 mi.</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <td class="tableh2">Features</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="table-left">Convenience</td>
+                    <td>Keyless Start</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">Entertainment</td>
+                    <td>Premium Sound System</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">Exterior</td>
+                    <td>Alloy Wheels</td>
+
+                </tr>
+                <tr>
+                    <td class="table-left">Safety</td>
+                    <td>Backup Camera</td>
+
+                </tr>
+
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <script>
+        var slideIndex, slides, dots, captionText;
+        function initGallery() {
+            slideIndex = 0;
+            slides = document.getElementsByClassName("imageHolder");
+            slides[slideIndex].style.opacity = 1;
+
+            captionText = document.querySelector(".captionTextHolder .captionText");
+            captionText.innerText = slides[slideIndex].querySelector(".captionText").innerText;
+
+            //disable nextPrevBtn if slide count is one
+            if (slides.length < 2) {
+                var nextPrevBtns = document.querySelector(".leftArrow,.rightArrow");
+                nextPrevBtns.style.display = "none";
+                for (i = 0; i < nextPrevBtn.length; i++) {
+                    nextPrevBtn[i].style.display = "none";
+                }
+            }
+
+            //add dots
+            dots = [];
+            var dotsContainer = document.getElementById("dotsContainer"), i;
+            for (i = 0; i < slides.length; i++) {
+                var dot = document.createElement("span");
+                dot.classList.add("dots");
+                dotsContainer.append(dot);
+                dot.setAttribute("onclick", "moveSlide(" + i + ")");
+                dots.push(dot);
+            }
+            dots[slideIndex].classList.add("active");
+        }
+        initGallery();
+        function plusSlides(n) {
+            moveSlide(slideIndex + n);
+        }
+        function moveSlide(n) {
+            var i;
+            var current, next;
+            var moveSlideAnimClass = {
+                forCurrent: "",
+                forNext: ""
+            };
+            var slideTextAnimClass;
+            if (n > slideIndex) {
+                if (n >= slides.length) { n = 0; }
+                moveSlideAnimClass.forCurrent = "moveLeftCurrentSlide";
+                moveSlideAnimClass.forNext = "moveLeftNextSlide";
+                slideTextAnimClass = "slideTextFromTop";
+            } else if (n < slideIndex) {
+                if (n < 0) { n = slides.length - 1; }
+                moveSlideAnimClass.forCurrent = "moveRightCurrentSlide";
+                moveSlideAnimClass.forNext = "moveRightPrevSlide";
+                slideTextAnimClass = "slideTextFromBottom";
+            }
+
+            if (n != slideIndex) {
+                next = slides[n];
+                current = slides[slideIndex];
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].className = "imageHolder";
+                    slides[i].style.opacity = 0;
+                    dots[i].classList.remove("active");
+                }
+                current.classList.add(moveSlideAnimClass.forCurrent);
+                next.classList.add(moveSlideAnimClass.forNext);
+                dots[n].classList.add("active");
+                slideIndex = n;
+                captionText.style.display = "none";
+                captionText.className = "captionText " + slideTextAnimClass;
+                captionText.innerText = slides[n].querySelector(".captionText").innerText;
+                captionText.style.display = "block";
+            }
+
+        }
+        var timer = null;
+        function setTimer() {
+            timer = setInterval(function () {
+                plusSlides(1);
+            }, 10000000);
+        }
+        setTimer();
+        function playPauseSlides() {
+            var playPauseBtn = document.getElementById("playPause");
+            if (timer == null) {
+                setTimer();
+                playPauseBtn.style.backgroundPositionY = "0px"
+            } else {
+                clearInterval(timer);
+                timer = null;
+                playPauseBtn.style.backgroundPositionY = "-33px"
+            }
+        }
+    </script>
+
+    <footer class="footer-basic">
+        <p class="footer-company">Buy with confidence</p>
+        <p class="footer-links">
+            <a href="sale.html">Used Cars</a>
+            ·
+            <a href="research.html">Research</a>
+            ·
+            <a href="contact.html">Contact</a>
+            ·
+
+
+
+        </p>
+        <p class="footer-company-name">NewRide &copy; 2021</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>
