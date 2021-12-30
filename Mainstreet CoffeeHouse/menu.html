@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mainstreet CoffeeHouse | Menu</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+/* This code is just for smooth scrolling when topics are clicked */
+$(document).ready(function(){
+
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      
+      event.preventDefault();
+
+      
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src='images/logo2.png' /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a class="cool-link" href="index.html">Home</a></li>
+        <li><a class="cool-link" href="menu.html">Menu</a></li>
+        <li><a class="cool-link" href="about.html">About</a></li>
+
+
+
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+
+    <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0,
+      0, 0.5), rgba(0, 0, 0, 0.5)),url(images/menuback8.jpg);">
+      <div class="hero-text">
+        <h1>Our Menu</h1>
+        <p id="hero-p">Get your first coffee on us by ordering
+          <br> a pastry on the side </p>
+
+      </div>
+    </div>
+    <br>
+    <nav id="menu-id" style="z-index: auto;">
+      <ul id="menu-ul">
+        <li id="menu-li">
+          <a id="menu-a" href="#1">Hot Drinks</a>
+        </li>
+        <li id="menu-li">
+          <a id="menu-a" href="#2">Cold Drinks</a>
+        </li>
+        <li id="menu-li">
+          <a id="menu-a" href="#3">Pastries</a>
+        </li>
+        <li id="menu-li">
+          <a id="menu-a" href="#4">Seasonal</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="menu-body">
+
+
+      <div class="menu-section">
+
+        <h2 id="1" class="menu-section-title">Hot Drinks</h2>
+
+        <!-- Item starts -->
+        <div class="menu-item">
+          <div class="menu-item-name">
+            Fruity Coffee
+          </div>
+
+          <div class="menu-item-price">
+            $1.99
+          </div>
+
+          <div class="menu-item-description">
+            Coffee made and brewed with fruits in mind! made with apple and orange
+            mix.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Espresso
+          </div>
+
+          <div class="menu-item-price">
+            $2.50
+          </div>
+
+          <div class="menu-item-description">
+            Brewed with the optimal temperature in mind.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Chai Tea Latte
+          </div>
+
+          <div class="menu-item-price">
+            $3.75
+          </div>
+
+          <div class="menu-item-description">
+            Selection of tazo herbal and black teas.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Flavored Latte
+          </div>
+
+          <div class="menu-item-price">
+            $4.00
+          </div>
+
+          <div class="menu-item-description">
+            Selection of tazo herbal and black teas mixed with vanilla and other
+            natural flavours.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Cappuccino
+          </div>
+
+          <div class="menu-item-price">
+            $3.25
+          </div>
+
+          <div class="menu-item-description">
+            Equal parts of espresso, steamed milk and milk foam
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Hot Chocolate
+          </div>
+
+          <div class="menu-item-price">
+            $2.50
+          </div>
+
+          <div class="menu-item-description">
+            Steamed milk and house-made chocolate sauce.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Macchiato
+          </div>
+
+          <div class="menu-item-price">
+            $2.55
+          </div>
+
+          <div class="menu-item-description">
+            Espresso with a dollop of milk foam.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+      </div>
+      <!-- Section ends: Hot Drinks -->
+
+
+
+      <h2 id="2" class="menu-section-title">Cold Drinks</h2>
+
+      <!-- Item starts -->
+      <div class="menu-item">
+        <div class="menu-item-name">
+          Frappuccino
+        </div>
+
+        <div class="menu-item-price">
+          $3.75
+        </div>
+
+        <div class="menu-item-description">
+          Flavors of apple and brown sugar blended with coffee, milk and ice.
+          Layered with a spiced apple drizzle and whipped cream.
+        </div>
+
+      </div>
+      <!-- Item ends -->
+
+      <!-- Item starts -->
+      <div class="menu-item">
+
+        <div class="menu-item-name">
+          Iced Coffee
+        </div>
+
+        <div class="menu-item-price">
+          $2.55
+        </div>
+
+        <div class="menu-item-description">
+          May be prepared either by brewing coffee in the normal way and then
+          serving it over ice or in cold milk.
+        </div>
+
+      </div>
+      <!-- Item ends -->
+
+      <!-- Item starts -->
+      <div class="menu-item">
+
+        <div class="menu-item-name">
+          Iced Latte
+        </div>
+
+        <div class="menu-item-price">
+          $3.55
+        </div>
+
+        <div class="menu-item-description">
+          Simply milk mixed into espresso with ice in the glass. Yes! It’s that
+          simple!
+        </div>
+
+      </div>
+      <!-- Item ends -->
+
+      <!-- Item starts -->
+      <div class="menu-item">
+
+        <div class="menu-item-name">
+          Toppochico
+        </div>
+
+        <div class="menu-item-price">
+          $1.95
+        </div>
+
+        <div class="menu-item-description">
+          Different ingredients depending on the season! come by for a free
+          taste.
+        </div>
+
+      </div>
+      <!-- Item ends -->
+
+      <!-- Item starts -->
+      <div class="menu-item">
+
+        <div class="menu-item-name">
+          Smoothie
+        </div>
+
+        <div class="menu-item-price">
+          $3.25
+        </div>
+
+        <div class="menu-item-description">
+          Made with selection of fruits picked by you.
+        </div>
+
+      </div>
+      <!-- Item ends -->
+
+
+      <!-- Item starts -->
+      <div class="menu-item">
+
+        <div class="menu-item-name">
+          Lemon Slush
+        </div>
+
+        <div class="menu-item-price">
+          $3.25
+        </div>
+
+        <div class="menu-item-description">
+          Lots of lemon, lots of ice, makes the slush taste nice.
+        </div>
+
+      </div>
+      <!-- Item ends -->
+      <br>
+    </div>
+    <!-- Section ends: Cold Drinks -->
+
+    <div class="menu-body">
+
+
+      <div class="menu-section">
+
+        <h2 id="3" class="menu-section-title">Pastries</h2>
+
+
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Croissant
+          </div>
+
+          <div class="menu-item-price">
+            $3.00
+          </div>
+
+          <div class="menu-item-description">
+            All butter croissant. crispy and soft.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Mini Banana Nut Loaf
+          </div>
+
+          <div class="menu-item-price">
+            $3.75
+          </div>
+
+          <div class="menu-item-description">
+            Fresh banana mixed with south american nuts.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Chocolate Muffin
+          </div>
+
+          <div class="menu-item-price">
+            $4.00
+          </div>
+
+          <div class="menu-item-description">
+            Variety of chocolate chunks in a chocolate cookie dough.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Pecan Biscotti
+          </div>
+
+          <div class="menu-item-price">
+            $3.25
+          </div>
+
+          <div class="menu-item-description">
+            House made biscotti with locally sourced pecans..
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Apple Churro Turnover
+          </div>
+
+          <div class="menu-item-price">
+            $2.50
+          </div>
+
+          <div class="menu-item-description">
+            Bourbon apple filling in a puff pastry coated in cinnamon spices.
+          </div>
+
+
+
+        </div>
+        <!-- Section ends: Pastries -->
+
+
+        <br>
+        <h2 id="4" class="menu-section-title">Seasonal</h2>
+
+        <!-- Item starts -->
+        <div class="menu-item">
+          <div class="menu-item-name">
+            Pumpkin Frappuccino
+          </div>
+
+          <div class="menu-item-price">
+            $3.75
+          </div>
+
+          <div class="menu-item-description">
+            Pumpkin plus traditional fall spice flavors, blended with coffee,
+            milk and ice and topped with whipped cream and pumpkin-pie spice.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Pumpkin Iced Coffee
+          </div>
+
+          <div class="menu-item-price">
+            $2.55
+          </div>
+
+          <div class="menu-item-description">
+            This special unsweetened combination of peach and nectarine flavors
+            plus green tea adds a delicious sparkle of nourishment to your day.
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Spooky Iced Latte
+          </div>
+
+          <div class="menu-item-price">
+            $3.55
+          </div>
+
+          <div class="menu-item-description">
+            Premium black latte is shaken with ice. It's the ideal iced tea—a rich
+            and flavorful black tea journey awaits you.
+          </div>
+
+
+        </div>
+        <!-- Item ends -->
+
+        <!-- Item starts -->
+        <div class="menu-item">
+
+          <div class="menu-item-name">
+            Haunted Toppochico
+          </div>
+
+          <div class="menu-item-price">
+            $1.95
+          </div>
+
+          <div class="menu-item-description">
+            Made with lots of scary seasonal things, come by to find more...
+          </div>
+
+        </div>
+        <!-- Item ends -->
+
+      </div>
+      <!-- Section ends: Seasonal -->
+
+
+    </div>
+
+
+    <footer>
+      <div class="leftFooter">
+        <ul>
+          <a class="addresshover" href="about.html"><li>
+            223 W Main St, </li>
+          <li>Houston, TX 77571</li>
+          <li>555-837-1734</li></a>
+
+
+        </ul>
+      </div>
+
+      <div class="centerFooter">
+        <a href="#">Mainstreet CoffeeHouse<br></a>
+        <a href="https://www.facebook.com/">
+          <img alt="Qries" class="face" src="images/facebook.png"
+            width=150" height="70">
+        </a>
+      </div>
+
+      <div class="rightFooter">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
